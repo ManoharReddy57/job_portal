@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details | JobConnect</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">JobConnect</div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+</header>
+
+<main class="page-container">
+    <div class="dashboard-card" id="jobDetails">
+        Loading job details...
+    </div>
+</main>
+
+<script src="../js/data.js"></script>
+<script src="../js/auth.js"></script>
+<script>
+const params = new URLSearchParams(window.location.search);
+const jobId = Number(params.get("id"));
+
+const job = jobs.find(item => item.id === jobId);
+const container = document.getElementById("jobDetails");
+
+if (!job) {
+    container.textContent = "Job not found.";
+} else {
+    container.innerHTML = `
+        <h1>${job.title}</h1>
+        <p class="company-name">${job.company}</p>
+        <hr>
+        <br>
+        <p><strong>Location:</strong> ${job.location}</p>
+        <p><strong>Salary:</strong> ${job.salary}</p>
+        <p><strong>Job Type:</strong> ${job.type}</p>
+        <p><strong>Experience:</strong> ${job.experience}</p>
+        <br>
+        <h3>Job Description</h3>
+        <br>
+        <p>${job.description}</p>
+        <br>
+        <button class="apply-btn" onclick="applyForJob(${job.id})">
+            Apply Now
+        </button>
+        <button class="apply-btn" onclick="saveJob(${job.id})">
+            Save Job
+        </button>
+    `;
+}
+</script>
+</body>
+</html>

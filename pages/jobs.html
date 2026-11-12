@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Jobs | JobConnect</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">JobConnect</div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="jobs.html">Find Jobs</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="nav-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="register.html" class="register-btn">Register</a>
+    </div>
+</header>
+
+<main class="page-container">
+    <h1>Find Your Next Job</h1>
+    <p>Explore opportunities matching your skills.</p>
+
+    <div class="filter-bar">
+        <input id="jobSearch" placeholder="Search job title...">
+
+        <select id="jobLocation">
+            <option value="">All Locations</option>
+            <option>Hyderabad</option>
+            <option>Bangalore</option>
+            <option>Chennai</option>
+            <option>Remote</option>
+        </select>
+
+        <select id="jobCategory">
+            <option value="">All Categories</option>
+            <option>IT</option>
+            <option>Data Analytics</option>
+            <option>Support</option>
+            <option>Design</option>
+        </select>
+
+        <button class="apply-btn" onclick="filterJobs()">Search</button>
+    </div>
+
+    <h3 id="resultCount"></h3>
+
+    <div class="job-grid" id="allJobs"></div>
+</main>
+
+<footer>
+    <h3>JobConnect</h3>
+    <p>Connecting talent with opportunity.</p>
+</footer>
+
+<script src="../js/data.js"></script>
+<script src="../js/jobs.js"></script>
+
+</body>
+</html>

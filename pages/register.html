@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | JobConnect</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">JobConnect</div>
+    <a href="../index.html">Home</a>
+</header>
+
+<div class="form-card">
+    <h2>Create Account</h2>
+    <p>Join JobConnect and find your dream job.</p>
+
+    <form id="registerForm">
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+
+        <label>Email Address</label>
+        <input type="email" id="email" required>
+
+        <label>Password</label>
+        <input type="password" id="password" minlength="6" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <div id="registerMessage" class="message"></div>
+
+    <p>Already registered?
+        <a href="login.html" class="action-link">Login</a>
+    </p>
+</div>
+
+<script src="../js/auth.js"></script>
+</body>
+</html>

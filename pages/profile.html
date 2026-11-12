@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | JobConnect</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">JobConnect</div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <button class="apply-btn" onclick="logout()">Logout</button>
+</header>
+
+<div class="form-card">
+    <h2>My Profile</h2>
+    <p>Update your candidate details.</p>
+
+    <form id="profileForm">
+
+        <label>Full Name</label>
+        <input type="text" id="profileName" required>
+
+        <label>Email</label>
+        <input type="email" id="profileEmail" disabled>
+
+        <label>Phone Number</label>
+        <input type="tel" id="profilePhone" placeholder="Enter phone number">
+
+        <label>Skills</label>
+        <input type="text" id="profileSkills"
+               placeholder="HTML, CSS, JavaScript">
+
+        <label>Experience</label>
+        <input type="text" id="profileExperience"
+               placeholder="Fresher">
+
+        <button type="submit">Update Profile</button>
+    </form>
+
+    <p id="profileMessage" class="message"></p>
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/profile.js"></script>
+
+</body>
+</html>

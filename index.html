@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JobConnect | Find Your Dream Job</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-briefcase"></i>
+            JobConnect
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pages/jobs.html">Find Jobs</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <a href="pages/login.html" class="login-btn">Login</a>
+            <a href="pages/register.html" class="register-btn">Register</a>
+        </div>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">Find Your Perfect Career</span>
+
+            <h1>
+                Find Your <span>Dream Job</span>
+                Today
+            </h1>
+
+            <p>
+                Discover thousands of job opportunities from
+                top companies and take the next step in your career.
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Job title or keyword">
+
+                <select id="locationInput">
+                    <option value="">All Locations</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Remote">Remote</option>
+                </select>
+
+                <button onclick="searchJobs()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
+                </button>
+
+            </div>
+
+            <p class="popular">
+                Popular: Python Developer, Web Developer, Data Analyst
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2>10K+</h2>
+            <p>Available Jobs</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>500+</h2>
+            <p>Companies</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>25K+</h2>
+            <p>Job Seekers</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>95%</h2>
+            <p>Success Rate</p>
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+
+        <div class="section-heading">
+            <h2>Popular Job Categories</h2>
+            <p>Explore jobs based on your interests</p>
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>IT & Software</h3>
+                <p>1200+ Jobs</p>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Data Analytics</h3>
+                <p>800+ Jobs</p>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>Customer Support</h3>
+                <p>600+ Jobs</p>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-bullhorn"></i>
+                <h3>Marketing</h3>
+                <p>400+ Jobs</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Jobs -->
+    <section class="featured-jobs">
+
+        <div class="section-heading">
+            <h2>Featured Jobs</h2>
+            <p>Explore the latest opportunities</p>
+        </div>
+
+        <div class="job-grid" id="jobContainer">
+            <!-- JavaScript displays jobs here -->
+        </div>
+
+        <div class="view-all">
+            <a href="pages/jobs.html">View All Jobs →</a>
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>Build Your Future With JobConnect</h2>
+        <p>
+            Find opportunities, connect with companies and
+            discover a career that matches your skills.
+        </p>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <h3>JobConnect</h3>
+        <p>Connecting talent with opportunity.</p>
+        <p>© 2026 JobConnect. All rights reserved.</p>
+    </footer>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
